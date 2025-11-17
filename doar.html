@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realizar Doação</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="bg-primary text-white py-3 shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="h5 mb-0 fw-bold">Conectando o Bem</h1>
+        <a href="doacoes.html" class="btn btn-light btn-sm">Voltar</a>
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <div class="card p-4 shadow-sm">
+        <h3 class="text-primary fw-bold mb-4 text-center">
+          Realizar Doação 💚
+        </h3>
+
+        <form id="doarForm">
+          <div class="mb-3">
+            <label class="form-label">Valor (R$):</label>
+            <input
+              type="number"
+              min="1"
+              class="form-control"
+              id="valorDoacao"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Escolha uma ONG:</label>
+            <select class="form-control" id="selectOng" required>
+              <option disabled selected>Selecionar ONG</option>
+              <option>Pet Feliz</option>
+              <option>Verde Vida</option>
+              <option>Mãos Unidas</option>
+              <option>Códigos do Futuro</option>
+            </select>
+          </div>
+
+          <button class="btn btn-success w-100 btn-lg">Confirmar Doação</button>
+        </form>
+
+        <div id="msgDoacao" class="alert alert-success mt-4 d-none"></div>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

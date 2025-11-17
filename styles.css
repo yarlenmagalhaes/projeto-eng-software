@@ -5,9 +5,11 @@
 }
 
 /* Geral */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f8fafc;
   color: #333;
   margin: 0;
@@ -17,16 +19,26 @@ body {
 }
 
 /* Quando o JS adicionar .loaded, a página aparece */
-body.loaded { opacity: 1; }
+body.loaded {
+  opacity: 1;
+}
 
-header { background-color: var(--cor-principal); }
-header h1 { font-weight: 600; }
+header {
+  background-color: var(--cor-principal);
+}
+header h1 {
+  font-weight: 600;
+}
 
 /* Impacto / CTA */
 #impacto {
-  background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+  background: linear-gradient(
+    135deg,
+    var(--cor-principal),
+    var(--cor-secundaria)
+  );
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 0;
 }
 #impacto button {
@@ -45,15 +57,33 @@ header h1 { font-weight: 600; }
 }
 
 /* Cards do feed */
-.card { border: none; border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease; }
-.card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-.card img { height: 180px; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.card img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 
 /* Menu */
-nav a { position: relative; transition: color 0.3s ease; font-weight: 500; }
-nav a:hover { color: #00c6ff; }
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #00c6ff;
+}
 nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -62,14 +92,34 @@ nav a::after {
   background-color: #00c6ff;
   transition: width 0.3s ease;
 }
-nav a:hover::after { width: 100%; }
-nav a.active { color: #ffd700 !important; font-weight: 600; }
-nav a.active::after { width: 100%; background-color: #ffd700; }
+nav a:hover::after {
+  width: 100%;
+}
+nav a.active {
+  color: #ffd700 !important;
+  font-weight: 600;
+}
+nav a.active::after {
+  width: 100%;
+  background-color: #ffd700;
+}
 
 /* Banners específicos */
-#bannerDoacoes { background: linear-gradient(135deg, #1a73e8, #00b894); background-attachment: fixed; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
-#bannerOngs { background: linear-gradient(135deg, #00b894, #1a73e8); background-attachment: fixed; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
-#bannerVoluntarios { background: linear-gradient(135deg, #ff8c00, #ffb700); background-attachment: fixed; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+#bannerDoacoes {
+  background: linear-gradient(135deg, #1a73e8, #00b894);
+  background-attachment: fixed;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+#bannerOngs {
+  background: linear-gradient(135deg, #00b894, #1a73e8);
+  background-attachment: fixed;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+#bannerVoluntarios {
+  background: linear-gradient(135deg, #ff8c00, #ffb700);
+  background-attachment: fixed;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
 
 /* Ranking badges */
 .badge {
@@ -78,33 +128,60 @@ nav a.active::after { width: 100%; background-color: #ffd700; }
   padding: 8px 14px;
   font-weight: 600;
   color: white !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.badge.gold { background: linear-gradient(45deg, #ffd700, #ffb700); }
-.badge.silver { background: linear-gradient(45deg, #c0c0c0, #a8a8a8); }
-.badge.bronze { background: linear-gradient(45deg, #cd7f32, #b76e2a); }
+.badge.gold {
+  background: linear-gradient(45deg, #ffd700, #ffb700);
+}
+.badge.silver {
+  background: linear-gradient(45deg, #c0c0c0, #a8a8a8);
+}
+.badge.bronze {
+  background: linear-gradient(45deg, #cd7f32, #b76e2a);
+}
 
 /* Ranking cards */
-#rankingDoadores .card, #rankingVoluntarios .card { border-radius: 20px; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-#rankingDoadores .card-body, #rankingVoluntarios .card-body { padding: 25px; }
+#rankingDoadores .card,
+#rankingVoluntarios .card {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+#rankingDoadores .card-body,
+#rankingVoluntarios .card-body {
+  padding: 25px;
+}
 
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
-.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Footer */
-footer { background-color: #fff; }
+footer {
+  background-color: #fff;
+}
 
 /* Responsividade leve */
 @media (max-width: 576px) {
-  .card img { height: 140px; }
-  #impacto { padding: 3rem 1rem; }
+  .card img {
+    height: 140px;
+  }
+  #impacto {
+    padding: 3rem 1rem;
+  }
 }
 /* === Banner de Perfil === */
 #bannerPerfil {
   background: linear-gradient(135deg, #1a73e8, #00b894);
   background-attachment: fixed;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* === Card do perfil === */
@@ -130,7 +207,7 @@ footer { background-color: #fff; }
 
 #formPerfil input:focus {
   border-color: var(--cor-principal);
-  box-shadow: 0 0 5px rgba(26,115,232,0.3);
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
 }
 /* === PERFIL NO TOPO === */
 #miniPerfil:hover #miniNome {
@@ -197,4 +274,191 @@ footer { background-color: #fff; }
   border-color: #0d6efd;
   background-color: #cfe2ff;
   box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a73e8;
+  font-size: 1.1rem;
+}
+.causa {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #e5efff;
+  cursor: pointer;
+  font-weight: 500;
+}
+.causa.selecionado {
+  background: #1a73e8;
+  color: #fff;
+}
+/* =====================
+   RESPONSIVIDADE GLOBAL
+   ===================== */
+
+/* Telefones pequenos (menos de 375px) */
+@media (max-width: 375px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  #miniFoto {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  #openMenu {
+    font-size: 1.2rem;
+  }
+}
+
+/* Telefone comum (até 576px) */
+@media (max-width: 576px) {
+  .card img {
+    height: 140px;
+  }
+
+  #impacto h2 {
+    font-size: 1.5rem;
+  }
+
+  #impacto p {
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+
+  #listaAvatares img.avatar-desenho {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  header nav a {
+    display: none;
+  }
+
+  .sidebar {
+    width: 240px;
+  }
+
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+/* Laptops pequenos (até 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #miniNome {
+    display: none; /* só a foto aparece */
+  }
+}
+
+/* Monitores grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 430px) {
+  #miniPerfil span {
+    display: none;
+  }
+
+  #miniFoto {
+    margin-left: -10px;
+  }
+}
+input,
+select,
+textarea {
+  font-size: 16px !important;
+}
+/* Banner de Doações repaginado */
+#bannerDoacoes {
+  background: linear-gradient(135deg, #1a73e8aa, #00b894aa),
+    url("https://images.unsplash.com/photo-1603570419989-9da3ec8eb73b?auto=format&fit=crop&w=1600&q=60");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 90px 0;
+  backdrop-filter: blur(3px);
+}
+
+/* Estilo dos cards do ranking */
+.ranking-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: none !important;
+}
+
+.ranking-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Medalhas animadas */
+.medalha {
+  font-size: 3rem;
+  animation: flutuar 2.5s infinite ease-in-out alternate;
+}
+
+@keyframes flutuar {
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+/* Destaque no top 1 */
+.top1 {
+  border: 3px solid gold;
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.5);
+}
+
+.card-vol {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 16px;
+}
+
+.card-vol:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
