@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ONGs - Conectando o Bem</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ONGs — Conectando o Bem</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -13,127 +13,140 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="bg-primary text-white py-3 shadow">
-      <button class="btn text-white d-lg-none me-3" id="openMenu">
-        <i class="bi bi-list" style="font-size: 1.8rem"></i>
-      </button>
-
       <div class="container d-flex justify-content-between align-items-center">
-        <h1 class="h4 mb-0 fw-bold">Conectando o Bem</h1>
-        <div class="d-flex align-items-center position-relative">
-          <nav class="me-4">
-            <a href="index.html" class="text-white text-decoration-none me-3"
-              >Início</a
-            >
-            <a href="ongs.html" class="text-white text-decoration-none me-3"
-              >ONGs</a
-            >
-            <a
-              href="voluntarios.html"
-              class="text-white text-decoration-none me-3"
-              >Voluntários</a
-            >
-            <a href="doacoes.html" class="text-white text-decoration-none"
-              >Doações</a
-            >
-          </nav>
+        <button class="btn text-white d-lg-none me-3" id="openMenu">
+          <i class="bi bi-list"></i>
+        </button>
+        <h1 class="h5 mb-0 fw-bold">Conectando o Bem</h1>
 
-          <!-- Mini Perfil -->
-          <div class="dropdown">
-            <a
-              class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-              href="#"
-              role="button"
-              id="miniPerfil"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                id="miniFoto"
-                src="https://picsum.photos/60"
-                alt="Perfil"
-                class="rounded-circle me-2"
-                style="
-                  width: 45px;
-                  height: 45px;
-                  object-fit: cover;
-                  border: 2px solid #fff;
-                "
-              />
-              <span id="miniNome" class="fw-semibold">Perfil</span>
-            </a>
-            <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="miniPerfil"
-            >
-              <li>
-                <a class="dropdown-item" href="perfil.html">Ver meu perfil</a>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item text-danger" href="#" id="btnSair"
-                  >Sair</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+        <nav class="d-none d-lg-flex">
+          <a href="index.html" class="text-white text-decoration-none me-3"
+            >Início</a
+          >
+          <a
+            href="ongs.html"
+            class="text-white text-decoration-none me-3 active"
+            >ONGs</a
+          >
+          <a
+            href="voluntariados.html"
+            class="text-white text-decoration-none me-3"
+            >Voluntariados</a
+          >
+          <a href="doacoes.html" class="text-white text-decoration-none"
+            >Doações</a
+          >
+        </nav>
+
+        <img
+          id="miniFoto"
+          src="https://picsum.photos/60"
+          class="rounded-circle"
+          style="
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+            border: 2px solid #fff;
+          "
+        />
       </div>
     </header>
 
-    <section id="bannerOngs" class="text-center text-white py-5 reveal">
-      <div class="container">
-        <h2 class="fw-bold mb-3">Conheça as ONGs que transformam vidas 🤝</h2>
-        <p class="lead mb-4">
-          Descubra projetos inspiradores e como se envolver com cada um.
-        </p>
-      </div>
-    </section>
-
-    <main class="container my-5">
-      <div id="listaOngs" class="row g-4 reveal"></div>
-    </main>
-
-    <footer class="bg-light text-center py-4 border-top">
-      <div class="container">
-        <p class="mb-3 fw-semibold text-primary">Conecte-se conosco</p>
-        <div class="d-flex justify-content-center gap-3 mb-3">
-          <a href="#" class="text-decoration-none fs-4 text-primary"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a href="#" class="text-decoration-none fs-4 text-primary"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="#" class="text-decoration-none fs-4 text-primary"
-            ><i class="bi bi-twitter"></i
-          ></a>
-          <a href="#" class="text-decoration-none fs-4 text-primary"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-        </div>
-        <p class="small text-muted mb-0">
-          © 2025 Conectando o Bem — Todos os direitos reservados
-        </p>
-      </div>
-    </footer>
     <div id="sidebar" class="sidebar shadow-lg">
       <button id="closeMenu" class="btn-close ms-auto mt-3 me-3"></button>
       <nav class="p-4 d-flex flex-column gap-3">
         <a href="index.html">Início</a>
         <a href="ongs.html">ONGs</a>
-        <a href="voluntarios.html">Voluntários</a>
+        <a href="voluntariados.html">Voluntariados</a>
         <a href="doacoes.html">Doações</a>
         <a href="perfil.html">Perfil</a>
       </nav>
     </div>
+
+    <main class="container my-5">
+      <h1 class="fw-bold text-primary text-center mb-4">ONGs parceiras</h1>
+      <div class="row g-4" id="listaOngs"></div>
+    </main>
+
+    <footer class="bg-light border-top py-4 mt-5 text-center">
+      <div class="container">
+        <small class="text-muted">© 2025 Conectando o Bem</small>
+      </div>
+    </footer>
+    <section class="partners container mt-5">
+      <h2 class="text-center mb-4">ONGs Parceiras</h2>
+
+      <div class="row g-4 justify-content-center">
+        <!-- ONG Esperança Viva -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100 text-center">
+            <img
+              src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800"
+              class="card-img-top"
+              alt="ONG Esperança Viva"
+            />
+            <div class="card-body">
+              <h5 class="card-title">ONG Esperança Viva</h5>
+              <p class="card-text text-muted">
+                Atuação direta com crianças e adolescentes em situação de
+                vulnerabilidade.
+              </p>
+              <p class="fw-bold text-success">
+                Educar, proteger e transformar.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instituto Semeando Futuro -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100 text-center">
+            <img
+              src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=800"
+              class="card-img-top"
+              alt="Instituto Semeando Futuro"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Instituto Semeando Futuro</h5>
+              <p class="card-text text-muted">
+                Capacitação profissional e apoio a jovens e adultos em busca de
+                oportunidades.
+              </p>
+              <p class="fw-bold text-success">
+                Um futuro melhor começa com uma chance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto Mãos do Bem -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm h-100 text-center">
+            <img
+              src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800"
+              class="card-img-top"
+              alt="Projeto Mãos do Bem"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Projeto Mãos do Bem</h5>
+              <p class="card-text text-muted">
+                Distribuição de alimentos, roupas e suporte comunitário em
+                regiões carentes.
+              </p>
+              <p class="fw-bold text-success">
+                Solidariedade que alcança quem precisa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./app.js"></script>
